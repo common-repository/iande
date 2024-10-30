@@ -1,0 +1,90 @@
+.iande-tainacan-modal {
+
+    .iande-modal {
+        width: 60em;
+    }
+
+    &__header, &__footer {
+
+        a {
+            align-items: center;
+            color: inherit;
+            display: flex;
+            font-size: 0.875em;
+            text-decoration: none;
+
+            img {
+                margin-left: 1ch;
+            }
+
+            b {
+                color: var(--iande-secondary-color);
+            }
+        }
+    }
+
+    &__header {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        h1 {
+            margin: 0;
+            text-align: start;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            h1 {
+                text-align: center;
+            }
+
+            a {
+                display: none;
+            }
+        }
+    }
+
+    &__details {
+        column-count: 3;
+        column-gap: 1.5em;
+
+        dl {
+            break-inside: avoid;
+            margin: 0 0 2em;
+        }
+
+        dt {
+            color: var(--iande-medium-color);
+            text-transform: uppercase;
+        }
+
+        dd {
+            margin: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            margin-top: 10px;
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            column-count: 1;
+        }
+    }
+
+    &__footer {
+        display: none;
+        justify-content: center;
+
+        @media screen and (max-width: 600px) {
+            display: flex;
+        }
+    }
+}

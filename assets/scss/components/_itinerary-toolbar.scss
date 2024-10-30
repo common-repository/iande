@@ -1,0 +1,144 @@
+@use 'sass:math';
+
+.iande-itinerary-header {
+    position: relative;
+}
+
+.iande-itinerary-toolbar {
+    background-color: var(--iande-background-color);
+    box-shadow: 0 3px 3px 0 rgba(gray, 0.3);
+    padding: 0.5em 0;
+
+    &__row {
+        align-items: center;
+        background-color: var(--iande-background-color);
+        color: var(--iande-secondary-color);
+        display: grid;
+        grid-gap: 0.5em;
+        grid-template-columns: repeat(3, 1fr);
+
+        & > :nth-child(2) {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        & > :nth-child(3) {
+            justify-self: right;
+        }
+
+        @media screen and (max-width: 75em) {
+            grid-template-columns: 1fr auto;
+
+            & > :nth-child(1) {
+                display: none;
+            }
+
+            & > :nth-child(2) {
+                text-align: start;
+            }
+        }
+    }
+
+    &__counter {
+        align-items: center;
+        border: 2px solid var(--iande-primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-flex;
+        height: 2.5em;
+        justify-content: center;
+        margin: 0 1ex;
+        width: 2.5em;
+
+        svg[data-icon] {
+            color: var(--iande-primary-color);
+            font-size: 0.75em;
+            margin-left: 0.25em;
+        }
+    }
+
+    .hide-sm {
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+
+.iande-itinerary-table, .iande-tainacan-list {
+
+    table {
+        width: 100%;
+
+        thead {
+            th {
+                border-bottom: 1px solid var(--iande-medium-color);
+                font-size: 0.75em;
+                padding: 0.5em;
+                text-align: start;
+
+                &:nth-of-type(4) {
+
+                    @media screen and (max-width: 800px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            td {
+                padding: 0.5em;
+                vertical-align: top;
+
+                &:not(.iande-tainacan-table__controls) {
+                    font-size: 0.75em;
+                }
+
+                &:nth-of-type(3) {
+                    font-weight: bold;
+                }
+
+                &:nth-of-type(4) {
+
+                    @media screen and (max-width: 800px) {
+                        display: none;
+                    }
+                }
+            }
+
+            img {
+                border-radius: var(--iande-border-radius);
+                height: 64px;
+                object-fit: cover;
+                width: 64px;
+
+                @media screen and (max-width: 600px) {
+                    height: 48px;
+                    width: 48px;
+                }
+            }
+        }
+    }
+}
+
+.iande-itinerary-table {
+    background-color: var(--iande-lighter-color);
+    box-shadow: 0 3px 3px 0 rgba(gray, 0.3);
+    overflow: auto;
+    padding: 0.5em;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: #{math.pow(10, 6)};
+
+    &__controls {
+        display: flex;
+
+        svg[data-icon] {
+            cursor: pointer;
+            font-size: 1.25em;
+            margin: 0.5em;
+        }
+    }
+}

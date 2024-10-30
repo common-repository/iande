@@ -1,0 +1,20 @@
+.iande {
+
+    // Typography
+    .text-center {
+        text-align: center;
+    }
+
+    .text-secondary {
+        color: var(--iande-secondary-color);
+    }
+
+    .text-sm {
+        font-size: 0.875em;
+    }
+
+    // Spacing
+    .mt-lg {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,169 @@
+.wp-admin {
+    .iande-status-metabox {
+        & > * {
+            margin-top: 15px !important;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        button.button {
+            display: block;
+            width: 100%;
+
+            &.button-cancel {
+                background-color: #E53E3E;
+                border-color: #E53E3E;
+
+                &:hover {
+                    background-color: darken(#E53E3E, 10%);
+                    border-color: darken(#E53E3E, 10%);
+                }
+            }
+        }
+
+        .form-error {
+            color: #E53E3E;
+        }
+    }
+
+    .iande-itinerary-metabox {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto 1fr;
+
+        .components-base-control__field {
+            display: contents;
+        }
+    }
+
+    .meta-box-sortables {
+        .cmb2-wrap {
+            input[type='text'],
+            select,
+            textarea {
+                max-width: 580px;
+                width: 100%;
+            }
+            summary {
+                cursor: pointer;
+            }
+
+            // Repeater field
+            .cmb-repeat {
+
+                .cmb-repeat-row {
+
+                    &::before {
+                        padding-top: 7px;
+                        box-sizing: border-box;
+                    }
+
+                    .cmb-remove-row-button {
+                        background-color: transparent;
+                        border: 2px solid #a00;
+                        border-radius: 50px;
+                        color: #a00;
+                        margin-top: 3px;
+                        padding: 0;
+                        height: 30px;
+                        width: 30px;
+
+                        &::before {
+                            box-sizing: border-box;
+                            padding: 4px;
+                        }
+
+                        &:hover {
+                            color: #fff;
+                            background-color: red;
+                            border: 2px solid red;
+                        }
+                    }
+
+                }
+
+                .alignleft {
+                    margin-right: 15px;
+
+                    &>p {
+                        display: none;
+                    }
+                }
+
+                select {
+                    margin-top: 0;
+                }
+
+                h3 {
+                    &.cmbhandle-title {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            // Ajax Posts Search
+            .cmb-post-ajax-search-results {
+                width: 100%;
+
+                li {
+                    max-width: 580px;
+
+                    a.edit-link {
+                        display: inline-block;
+                        padding: 5px 0;
+                        max-width: 90%;
+                        width: 95%;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    // CSS para os campos `disable` do CPT Group
+    &.post-type-group {
+
+        #group_checkin,
+        #group_feedback,
+        #group_group,
+        #group_report {
+
+            input.disabled,
+            input:disabled,
+            select.disabled,
+            select:disabled,
+            textarea.disabled,
+            textarea:disabled {
+                background: #ffffff;
+                border-color: #8c8f94;
+                box-shadow: 0 0 0 transparent;
+                color: #2c3338;
+                cursor: not-allowed;
+                opacity: .8;
+            }
+
+            input[type=checkbox].disabled,
+            input[type=checkbox].disabled:checked:before,
+            input[type=checkbox]:disabled,
+            input[type=checkbox]:disabled:checked:before,
+            input[type=radio].disabled,
+            input[type=radio].disabled:checked:before,
+            input[type=radio]:disabled,
+            input[type=radio]:disabled:checked:before {
+                cursor: not-allowed;
+                opacity: .8;
+            }
+        }
+
+    }
+
+}

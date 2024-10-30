@@ -1,0 +1,131 @@
+.iande-form {
+
+    .iande-form-grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 0;
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .iande-label {
+        color: var(--iande-secondary-color);
+        font-size: 1em;
+        font-weight: bold;
+
+        & + .iande-field {
+            margin-top: 0.5em;
+        }
+
+        &__optional {
+            color: var(--iande-primary-color);
+            font-size: 0.875em;
+            font-weight: bold;
+            float: right;
+        }
+    }
+
+    .iande-hint {
+        display: block;
+        margin: 5px 0;
+
+        b {
+            color: var(--iande-secondary-color);
+        }
+    }
+
+    .iande-input {
+        border: 2px solid var(--iande-light-color);
+        border-radius: var(--iande-border-radius);
+        background-color: var(--iande-background-color);
+        color: var(--iande-text-color);
+        display: block;
+        font-family: inherit;
+        font-size: 1em;
+        height: fit-content;
+        padding: 15px 20px;
+        width: 100%;
+
+        &.invalid {
+            border-color: var(--iande-error-color);
+        }
+
+        &:disabled {
+            background-color: var(--iande-lighter-color);
+        }
+
+        &::placeholder {
+            color: var(--iande-medium-color);
+        }
+    }
+
+    .iande-radio-group {
+        display: flex;
+        flex-wrap: wrap;
+
+        &.columns {
+            flex-direction: column;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    .iande-radio {
+        align-items: center;
+        display: flex;
+        margin: 10px 20px 0 0;
+
+        input {
+            margin: 0 7.5px 0 0;
+            transform: scale(1.25);
+        }
+    }
+
+    .iande-form-error {
+        color: var(--iande-error-color);
+        text-align: center;
+    }
+
+    .iande-field {
+        .iande-form-error {
+            font-size: 0.875em;
+            margin: 0.25em var(--iande-border-radius) 0;
+            text-align: start;
+        }
+    }
+
+    .iande-form-message {
+        color: var(--iande-success-color);
+        font-size: 0.875em;
+        margin: 5px var(--iande-border-radius) 0;
+
+        &.-error {
+            color: var(--iande-error-color);
+        }
+    }
+
+    .iande-complex-field {
+        background-color: var(--iande-lighter-color);
+        border-radius: var(--iande-border-radius);
+        margin-top: 20px;
+        padding: 1em;
+    }
+
+    .iande-form-link {
+        color: var(--iande-secondary-color);
+        display: block;
+        font-size: 0.875em;
+        text-align: end;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

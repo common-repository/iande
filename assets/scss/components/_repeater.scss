@@ -1,0 +1,11 @@
+.iande-repetition {
+    &__remove {
+        color: var(--iande-light-color);
+        float: right;
+        margin-right: var(--iande-border-radius);
+
+        .iande-complex-field & {
+            color: var(--iande-medium-color);
+        }
+    }
+}

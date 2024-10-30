@@ -1,0 +1,31 @@
+.iande-tooltip {
+    color: var(--iande-secondary-color);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.tooltip {
+    border-radius: var(--iande-border-radius);
+    box-shadow: 0 5px 5px 0 rgba(gray, 0.3);
+    display: block;
+    margin: 10px;
+    z-index: 100;
+
+    &-inner {
+        background-color: var(--iande-background-color);
+        border-radius: var(--iande-border-radius);
+        color: var(--iande-secondary-color);
+        font-family: var(--iande-text-font);
+        font-size: 0.8rem;
+        padding: 5px;
+        text-align: center;
+
+        @media screen and (min-width: 601px) {
+            max-width: 300px;
+        }
+
+        p {
+            margin: 5px;
+        }
+    }
+}

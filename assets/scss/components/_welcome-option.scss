@@ -1,0 +1,21 @@
+.iande-welcome-option {
+    background-color: var(--iande-lighter-color);
+    backdrop-filter: opacity(20%);
+    border-radius: var(--iande-border-radius);
+
+    &__title {
+        align-items: center;
+        background-color: var(--iande-primary-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    &__description {
+        padding: 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+}

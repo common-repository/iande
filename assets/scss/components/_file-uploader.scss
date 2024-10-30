@@ -1,0 +1,32 @@
+.iande-file-uploader {
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type=file] {
+        display: none;
+    }
+
+    &__thumbnail {
+        margin-right: 20px;
+
+        img {
+            height: 200px;
+            object-fit: cover;
+            width: 200px;
+        }
+    }
+
+    & > :nth-child(2) {
+        align-items: flex-start;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 10px 0;
+
+        .iande-button {
+            height: auto;
+            margin-top: 10px;
+        }
+    }
+}

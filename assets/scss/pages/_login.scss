@@ -1,0 +1,19 @@
+#iande-login {
+    .iande-form {
+        .iande-input {
+            border: 1px solid var(--iande-primary-color);
+        }
+
+        .iande-form-link {
+            color: var(--iande-medium-color);
+        }
+    }
+
+    .iande-privacy-policy {
+        text-align: center;
+
+        a {
+            color: var(--iande-medium-color);
+        }
+    }
+}

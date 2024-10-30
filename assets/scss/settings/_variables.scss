@@ -1,0 +1,36 @@
+$border-radius: 10px !default;
+
+$primary-color: #A8DBBC !default;
+$secondary-color: #1E2E55 !default;
+$tertiary-color: #7DB6C5 !default;
+$background-color: white !default;
+$lighter-color: #F5F5F5 !default;
+$light-color: #DDDDDD !default;
+$medium-color: #999999 !default;
+$text-color: #666666 !default;
+$error-color: #E53E3E !default;
+$success-color: #238B19 !default;
+
+$text-font: 'Open Sans', sans-serif;
+$title-font: 'Quicksand', 'Open Sans', sans-serif;
+
+:root {
+    --iande-border-radius: #{$border-radius};
+
+    --iande-primary-color: #{$primary-color};
+    --iande-secondary-color: #{$secondary-color};
+    --iande-tertiary-color: #{$tertiary-color};
+    --iande-background-color: #{$background-color};
+    --iande-lighter-color: #{$lighter-color};
+    --iande-light-color: #{$light-color};
+    --iande-medium-color: #{$medium-color};
+    --iande-text-color: #{$text-color};
+    --iande-error-color: #{$error-color};
+    --iande-success-color: #{$success-color};
+
+    --iande-text-font: #{$text-font};
+    --iande-title-font: #{$title-font};
+
+    // Aliases
+    --iande-accent-color: var(--iande-secondary-color);
+}

@@ -1,0 +1,123 @@
+@import 'vue-cal/dist/vuecal.css';
+
+.iande-admin-agenda {
+
+    &__month {
+        font-size: 1.2em;
+        font-weight: 500;
+        margin: 5px 10px;
+    }
+
+    &__line {
+        border-top: 1px solid #EEE;
+        font-variant-numeric: tabular-nums;
+        margin: 0 10px;
+    }
+
+    &__event {
+        align-items: center;
+        color: rgba(black, 0.75);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        &.publish {
+            background-color: lightgreen;
+        }
+
+        &.pending {
+            background-color: lemonchiffon;
+
+            &:before {
+                background-color: crimson;
+                border-radius: 50%;
+                box-shadow: 0 0 0.25em pink;
+                content: '';
+                height: 0.5em;
+                position: absolute;
+                right: 0.25em;
+                top: 0.25em;
+                width: 0.5em;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        svg[data-icon] {
+            margin-left: 1ch;
+        }
+
+        .vuecal__cells.week-view & {
+
+            & > :nth-of-type(2) {
+                display: none;
+            }
+
+            svg[data-icon] {
+                display: none;
+            }
+        }
+    }
+
+    &__group-link {
+        font-weight: bold;
+    }
+
+    &__counters {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__counter {
+
+        svg[data-icon] {
+            font-size: 0.875em;
+        }
+
+        &.publish {
+
+            svg[data-icon] {
+                color: limegreen;
+            }
+        }
+
+        &.pending {
+
+            svg[data-icon] {
+                color: orange;
+            }
+
+            &:before {
+                background-color: crimson;
+                border-radius: 50%;
+                box-shadow: 0 0 0.25em pink;
+                content: '';
+                height: 0.5em;
+                position: absolute;
+                right: 0.25em;
+                top: 0.25em;
+                width: 0.5em;
+            }
+        }
+    }
+
+    .vuecal {
+
+        &__cells.month-view {
+
+            .vuecal__cell-content {
+                justify-content: flex-start;
+                position: relative;
+            }
+        }
+    }
+}
